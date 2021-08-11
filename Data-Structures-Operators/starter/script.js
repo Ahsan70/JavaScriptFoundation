@@ -91,3 +91,14 @@ console.log(ingrediants);
 
 restaurant.orderPasta(ingrediants[0],ingrediants[1],ingrediants[2]);
 restaurant.orderPasta(...ingrediants);
+
+
+const [aw,bw,...others]=[1,2,3,4,5];
+console.log(aw,bw,others);
+
+const [pizza,,risotto,...othersFood]=[...restaurant.mainMenu,...restaurant.starterMenu];
+console.log(pizza,risotto,othersFood);
+
+const {sat,...weekdays}=restaurant.openingHours;
+console.log(sat);
+
