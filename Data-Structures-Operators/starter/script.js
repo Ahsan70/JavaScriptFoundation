@@ -14,10 +14,45 @@ const restaurant = {
 
   order:function(staterIndex,mainIndex){
     return [this.starterMenu[staterIndex],this.mainMenu[mainIndex]];
+  },
+  openingHours:{
+    thu:{
+      open:12,
+      close:22,
+    },
+    fri:{
+      open:11,
+      close:23,
+    },
+    sat:{
+      open:0,
+      close:24,
+    },
   }
 };
 
-const [starter,mainCourse]=restaurant.order(2,0);
-console.log(starter,mainCourse);
+const {name, openingHours,categories}=restaurant;
+console.log(name,openingHours,categories);
+
+const{name:restaurantName,openingHours:hours,categories:tags}=restaurant;
+console.log(restaurantName,hours,tags);
+
+const {menu=[],starterMenu:starters=[]}=restaurant;
+console.log(menu,starters);
+
+let a=111;
+let b=999;
+const obj={a:23,b:7,c:14};
+({a,b}=obj);
+
+console.log(a,b);
+
+const {
+  fri:{open,close},
+
+}=openingHours;
+console.log(open,close);
+// const [starter,mainCourse]=restaurant.order(2,0);
+// console.log(starter,mainCourse);
 
 
