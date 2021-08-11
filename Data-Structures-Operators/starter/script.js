@@ -73,12 +73,12 @@ const meinMenuCopy=[...restaurant.mainMenu];
 // Join 2 arrays
 
 const reMenu =[...restaurant.starterMenu,...restaurant.mainMenu];
-console.log(reMenu);
+// console.log(reMenu);
 
 const str ='Jonas';
 const letters=[...str,'','S.'];
-console.log(letters);
-console.log(...str);
+// console.log(letters);
+// console.log(...str);
 
 
 const ingrediants=
@@ -87,18 +87,25 @@ const ingrediants=
 prompt("Let's make pasta ! Ingrediant 2?"),
 prompt("Let's make pasta ! Ingrediant 3?")];
 
-console.log(ingrediants);
+// console.log(ingrediants);
 
 restaurant.orderPasta(ingrediants[0],ingrediants[1],ingrediants[2]);
 restaurant.orderPasta(...ingrediants);
 
 
 const [aw,bw,...others]=[1,2,3,4,5];
-console.log(aw,bw,others);
+// console.log(aw,bw,others);
 
 const [pizza,,risotto,...othersFood]=[...restaurant.mainMenu,...restaurant.starterMenu];
-console.log(pizza,risotto,othersFood);
+// console.log(pizza,risotto,othersFood);
 
 const {sat,...weekdays}=restaurant.openingHours;
-console.log(sat);
+// console.log(sat);
+
+
+const menuFor =[...restaurant.starterMenu,...restaurant.mainMenu];
+for(const item of menuFor)
+{
+  console.log(item);
+}
 
