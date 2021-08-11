@@ -11,7 +11,9 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-
+orderPasta:function(ing1,ing2,ing3){
+console.log(`Here is your declicious pasta with ${ing1},${ing2} and ${ing3}`);
+},
   order:function(staterIndex,mainIndex){
     return [this.starterMenu[staterIndex],this.mainMenu[mainIndex]];
   },
@@ -45,14 +47,47 @@ let b=999;
 const obj={a:23,b:7,c:14};
 ({a,b}=obj);
 
-console.log(a,b);
+// console.log(a,b);
 
 const {
   fri:{open,close},
 
 }=openingHours;
-console.log(open,close);
+// console.log(open,close);
 // const [starter,mainCourse]=restaurant.order(2,0);
 // console.log(starter,mainCourse);
+const arr =[7,8,9];
+const badNewArr=[1,2,arr[0],arr[1],arr[2]];
+console.log(badNewArr);
+
+const newArr =[1,2,...arr];
+console.log(newArr);
+
+console.log(1,2,7,8,9);
+const newMenu=[...restaurant.mainMenu,'Gnocci'];
+console.log(newMenu);
+
+// Copy array
+const meinMenuCopy=[...restaurant.mainMenu];
+
+// Join 2 arrays
+
+const reMenu =[...restaurant.starterMenu,...restaurant.mainMenu];
+console.log(reMenu);
+
+const str ='Jonas';
+const letters=[...str,'','S.'];
+console.log(letters);
+console.log(...str);
 
 
+const ingrediants=
+[
+  prompt("Let's make pasta ! Ingrediant 1?"),
+prompt("Let's make pasta ! Ingrediant 2?"),
+prompt("Let's make pasta ! Ingrediant 3?")];
+
+console.log(ingrediants);
+
+restaurant.orderPasta(ingrediants[0],ingrediants[1],ingrediants[2]);
+restaurant.orderPasta(...ingrediants);
